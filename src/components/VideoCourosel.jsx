@@ -3,7 +3,8 @@ import { hightlightsSlides } from '../constants'
 import {gsap} from 'gsap'
 import { pauseImg, playImg, replayImg } from '../utils';
 import { useGSAP } from '@gsap/react';
-import gasp from 'gasp';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const VideoCourosel = () => {
     const videoRef = useRef([]);
@@ -28,8 +29,9 @@ const VideoCourosel = () => {
         })
         gsap.to('#video',{
             scrollTrigger:{
-                trigger:'#video',
-                toggleActions:'restart none none none'
+                trigger: videoRef.current[videoId], // Use the correct video reference
+                start: "top center", // Adjust start point
+                toggleActions: "restart none none none",
             },
             onComplete:()=>{
                 setvideo((prev)=>({
@@ -154,7 +156,7 @@ const VideoCourosel = () => {
                     <div className='top-12 absolute left-[5%] z-10'>
                      {
                         list.textLists.map((text,i)=>(
-                            <p id={i} className='md:text-2xl text-xl font-medium' >
+                            <p key={`text-${i}`} className='md:text-2xl text-xl font-medium'>
                                 {text}
                             </p>
                         ))

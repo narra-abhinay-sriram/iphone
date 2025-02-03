@@ -22,3 +22,6 @@ canvas {
   max-width: 1120px;
 }
 
+.overflow-hidden {
+  overflow: hidden !important;
+}

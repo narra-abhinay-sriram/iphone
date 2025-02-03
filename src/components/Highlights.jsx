@@ -16,8 +16,8 @@ gsap.to('.link',{
   },[])
 
   return (
-    <section id='highlights' className='w-screen h-full overflow-hidden sm:py-32 p-20 sm:px-10 px-5 bg-zinc-900'>
-      <div className='screen-max-width'>
+    <section id='highlights' className='w-full h-full overflow-hidden relative sm:py-32 p-20 sm:px-10 px-5 bg-zinc-900'>
+      <div className='screen-max-width overflow-hidden'>
         <div className='w-full mb-12 md:flex justify-between items-end'>
           <h1 id='text' className='text-[#86868b] text-3xl md:text-5xl lg:text-6xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20'>Get the highlights.</h1>
           <div className='flex flex-wrap items-end gap-5'>
