@@ -27,12 +27,13 @@ const Footer = () => {
             Copright @ 2024 Apple Inc. All rights reserved.
                 </p>
                 <div className='flex'>
-                    {footerLinks.map((Link,i)=>{
-                        <p key={Link} className='font-semibold text-[#86868b] text-xs'>
+                    {footerLinks.map((Link,i)=>
+                        (<p key={Link} className='font-semibold text-[#86868b] text-xs'>
                             {Link} {' '}
+                            
                             {i!= footerLinks.length-1 && <span className='mx-2'></span>}
-                        </p>
-                    })}
+                        </p>)
+                    )}
 
                 </div>
 
