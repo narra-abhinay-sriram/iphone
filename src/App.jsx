@@ -8,6 +8,7 @@ import Model from './components/Model'
 import * as sentry from '@sentry/react'
 import Features from './components/Features'
 import Howitworks from './components/Howitworks'
+import Footer from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
   <Model/>
   <Features/>
   <Howitworks/>
+  <Footer/>
 </main>
   )
 }
