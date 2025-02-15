@@ -7,6 +7,7 @@ import Highlights from './components/Highlights'
 import Model from './components/Model'
 import * as sentry from '@sentry/react'
 import Features from './components/Features'
+import Howitworks from './components/Howitworks'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
   <Highlights/>
   <Model/>
   <Features/>
+  <Howitworks/>
 </main>
   )
 }
