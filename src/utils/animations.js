@@ -1,4 +1,6 @@
-
+import gsap from 'gsap'
+import {ScrollTrigger} from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
 export const gsapanimation=(timeline,rotationRef,rotationState,firstTarget,secondTarget,animationProps)=>{
     timeline.to(rotationRef.current.rotation,{
         y:rotationState,
@@ -18,4 +20,16 @@ timeline.to(secondTarget,{
 '<'
 )
 
+}
+
+export const animatewithGsap=(target,animationProps,scrollProps)=>{
+    gsap.to(target,{
+        ...animationProps,
+        scrollTrigger:{
+            trigger:target,
+            toggleActions: 'restart none none none',
+            start:'top 85%',
+            ...scrollProps
+        }
+    })
 }
