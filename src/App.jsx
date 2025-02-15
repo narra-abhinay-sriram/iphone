@@ -5,11 +5,14 @@ import Navbar from './components/navbar'
 import Hero from './components/Hero'
 import Highlights from './components/Highlights'
 import Model from './components/Model'
+import * as sentry from '@sentry/react'
 
 function App() {
   const [count, setCount] = useState(0)
+  
 
   return (
+    
 <main className='bg-black '>
   <Navbar/>
   <Hero/>
@@ -19,4 +22,4 @@ function App() {
   )
 }
 
-export default App
+export default sentry.withProfiler(App)
